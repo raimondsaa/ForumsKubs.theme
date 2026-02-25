@@ -16,23 +16,7 @@ post variation for sponsors
       {{{html}}}
     </div>
 
-    <!-- sponsor navigation (only for #sponsor posts) -->
-    {{#has tag="#sponsor"}}
-      <hr class="my-10">
-      <nav aria-label="Citi atbalstītāji" class="space-y-3">
-        <h2 class="text-lg font-semibold">Mūsu atbalstītāji</h2>
-        {{#get "posts" filter="tag:hash-sponsor+id:-{{id}}" order="published_at desc" limit="8" as |sponsors|}}
-          <ul class="flex flex-wrap gap-3">
-            {{#foreach sponsors}}
-              <li>
-                <a href="{{url}}" class="px-4 py-2 rounded-full bg-container-dark/10 hover:bg-container-dark/20 transition">
-                  {{title}}
-                </a>
-              </li>
-            {{/foreach}}
-          </ul>
-        {{/get}}
-      </nav>
-    {{/has}}
+
   </article>
+    <div class="my-10"></div>
 </div>
